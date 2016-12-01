@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+section{
+	width:128px;
+	margin:30px auto;
+	perspective:600px;
+	perspective-origin: 5% 80%;
+
+}
+div{
+	width:128px;
+	transform-style: preserve-3d;
+	
+
+}
+img{
+	width:128px;
+	
+	position: absolute;	
+}
+img:nth-child(1){
+	transform:rotateY(0deg) translateZ(195.83PX);
+
+}
+img:nth-child(2){
+	transform:rotateY(40deg) translateZ(195.83PX);
+}
+img:nth-child(3){
+	transform:rotateY(80deg) translateZ(195.83PX);
+}
+img:nth-child(4){
+	transform:rotateY(120deg) translateZ(195.83PX);
+}
+img:nth-child(5){
+	transform:rotateY(160deg) translateZ(195.83PX);
+}
+img:nth-child(6){
+	transform:rotateY(200deg) translateZ(195.83PX);
+}
+img:nth-child(7){
+	transform:rotateY(240deg) translateZ(195.83PX);
+}
+img:nth-child(8){
+	transform:rotateY(280deg) translateZ(195.83PX);
+}
+img:nth-child(9){
+	transform:rotateY(320deg) translateZ(195.83PX);
+}
+</style>
+</head>
+<body>
+<section>
+<div>
+<img src="imgs/studio_0001.jpg">
+<img src="imgs/studio_0002.jpg">
+<img src="imgs/studio_0003.jpg">
+<img src="imgs/studio_0004.jpg">
+<img src="imgs/studio_0005.jpg">
+<img src="imgs/studio_0006.jpg">
+<img src="imgs/studio_0007.jpg">
+<img src="imgs/studio_0008.jpg">
+<img src="imgs/studio_0009.jpg">
+</div>
+</section>
+<script>
+var imgs=document.getElementsByTagName('img')
+var div	= document.getElementsByTagName('div')[0];	
+		for(var i=0;i<imgs.length;i++){
+			var num=1
+			imgs[i].onclick=function(){
+				num++
+				div.style.transform="rotateY("+-40*num+"deg)";
+			}
+		}
+
+
+</script>
+</body>
+</html>
