@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+#wrap{
+	position: relative;
+}
+p{	
+	width:80px;
+	height:40px;
+	border:1px solid #000;
+	position: absolute;
+	background: blue;
+	text-align:center;
+	font:18px/40px "微软雅黑";
+	display:none;
+}
+
+
+</style>
+<script>
+	window.onload=function(){
+		
+		var wrap=document.getElementById("wrap")
+			for(var i=0;i<100;i++){
+				wrap.innerHTML=wrap.innerHTML+"<p></p>";
+
+			}		
+			var p=document.getElementsByTagName("p");
+			
+			for(var i=1;i<10;i++){
+				
+				for(var j=1;j<i+1;j++){
+					p[i*10+j].style.left=80*j+"px";
+					p[i*10+j].style.top=40*i+"px";
+					p[i*10+j].innerHTML=j+"*"+i+"="+i*j
+					p[i*10+j].style.display="block"
+					
+				}
+			}
+
+
+	}
+
+</script>
+
+</head>
+
+<body>
+<div id="wrap">
+
+</div>
+
+</body>
+</html>

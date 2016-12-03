@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+p{
+	margin:0;
+	width:360px;
+	height:350px;
+	border:1px solid #000;
+	background: #5ee813;
+	position: fixed;
+	display:none;
+	left:779px;
+	top:100px;
+}
+span{
+	width:370px;
+	height:350px;
+	font:70px/350px "微软雅黑";
+	text-align: center;
+}
+section{
+	width:360px;
+	background: red;
+	margin:30px auto;
+}
+div{
+	width:40px;
+	height:40px;
+	border:2px solid #000;
+	background: #a8dcf4;
+	float:left;
+	font:20px/40px "宋体";
+	text-align: center;
+}
+
+input{
+	margin:0;
+	padding:0;
+	outline: none;
+	display: block;
+	margin:30px auto;
+	width:150px;
+	height:40px;
+	background: #1af1b2;
+}
+</style>
+<script>
+	window.onload=function(){
+		var section=document.getElementsByTagName('section')[0];
+		var input=document.getElementsByTagName('input');
+		var divs=document.getElementsByTagName('div');
+		var p=document.getElementsByTagName('p')[0];
+		var spans=p.getElementsByTagName('span');
+		
+		var timer=0
+		var timer1=0
+			for(var i=1;i<65;i++){	
+				section.innerHTML+="<div>"+i+"</div>"				
+			};	
+
+				
+			input[0].onclick=function(){
+				var m=0;
+				for(var i=0;i<64;i++){
+						divs[i].style.background="";
+				}	
+				 p.style.display="block";
+
+				
+				var num=Math.random()*64;
+		
+				num=parseInt(num,10)
+				var n=Math.random()*64;
+				n=parseInt(n,10)// 取整，十进制
+				if(m==n){
+				var num=Math.random()*64;
+		
+				num=parseInt(num,10)
+				var n=Math.random()*64;
+				n=parseInt(n,10)
+				}
+
+			clearInterval(timer1)
+			fn()
+
+			timer1=setInterval(fn,1000)
+				
+			function fn(){
+					for(var i=0;i<spans.length;i++){
+						spans[i].style.display="none"
+					}
+					spans[m].style.display="inline-block"
+					m++
+					if(m>3){
+						m=0
+					}
+
+				}
+
+			timer=setTimeout(function(){
+					divs[num].style.background="blue";
+					divs[n].style.background="blue";
+					p.style.display="none";
+		
+				},4000)
+
+				
+			}
+			
+		
+
+	}
+
+</script>
+</head>
+<body>
+<p>
+<span>3</span>
+<span>2</span>
+<span>1</span>
+<span>两个幸运儿</span>
+</p>
+
+<input type="button" value="随机点名" class="in">
+
+
+<section>
+
+</section>
+</body>
+</html>

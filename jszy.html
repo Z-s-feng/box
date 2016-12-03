@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+
+span{
+	font:20px/40px "宋体";
+}
+#box{
+	height:100px;
+	width:100px;
+	border:5px solid #000;
+}
+
+#btn{
+	background: red;
+	font:20px/30px "宋体"
+}
+#shezhi{
+	height:410px;
+	width:340px;
+	border:5px solid gray;
+	position:fixed;
+	left:400px;
+	top:200px;
+	padding:20px 40px 20px 20px;
+	display: none;
+
+}
+.section1{
+	height:100px;
+	margin-bottom:15px;
+}
+.text{
+	float:left;
+	font:20px/50px "宋体";
+	margin-right: 20px;
+}
+.text1{
+	float:left;
+	font:20px/50px "宋体";
+	margin-right: 39px;
+}
+
+#lv{
+	float:left;
+	height:50px;
+	width:50px;
+	background:green;
+	margin-right: 40px;
+	font:20px/50px "微软雅黑";
+	color:#fff;
+	text-align:center;
+}
+#yl{
+	float:left;
+	height:50px;
+	width:50px;
+	background:yellow;
+	margin-right: 40px;
+	font:20px/50px "微软雅黑";
+	text-align:center;
+	color:#fff;
+
+}
+#bl{
+	float:left;
+	height:50px;
+	width:50px;
+	background:blue;
+	font:20px/50px "微软雅黑";
+	color:#fff;
+	text-align:center;
+
+}
+.sizes{
+	float:left;
+	height:50px;
+	width:50px;
+	background:#eaebec;
+	font:20px/50px "微软雅黑";
+	color:#fff;
+	text-align:center;
+	margin-right: 40px;
+
+
+}
+.sure{
+	margin:50px 105px;
+
+}
+.sure1{
+	background:#000;
+	color:#fff;
+	height:30px;
+	width:50px;
+	font:10px/20px "宋体";
+	margin-right: 15px;
+}
+#sure2{
+	background:#000;
+	color:#fff;
+	height:30px;
+	width:50px;
+	font:10px/20px "宋体";
+	
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+
+<body>
+	<span>请为下面的DIV设置样式</span>
+	<input type="button" value="点击设置" id="btn">
+	<div id="box"></div>
+	<div id="shezhi">
+		
+		<div class="section1">
+			<div class="text1">请选择背景色</div>
+			<div id="lv" >绿</div>
+			<div id="yl">黄</div>
+			<div id="bl">蓝</div>
+		</div>
+		<div class="section1">
+			<div class="text">请选择宽（px）</div>
+			<div class="sizes" id="width100">100</div>
+			<div class="sizes" id="width200">200</div>
+			<div class="sizes" id="width300">300</div>
+		</div>
+		<div class="section1">
+			<div class="text">请选择高（px）</div>
+			<div class="sizes" id="size100">100</div>
+			<div class="sizes" id="size200">200</div>
+			<div class="sizes" id="size300">300</div>
+		</div>
+		<form class="sure">
+			<input type="button" value="重置" id="sure1"/>
+			<input type="button" value="确定" id="sure2"/>
+		</form>
+	<div>
+	<script>
+		document.getElementById('btn').onclick=function(){
+			document.getElementById('shezhi').style.display="block";
+		}
+
+		document.getElementById('size100').onclick=function(){
+			document.getElementById('box').style.height="100px";
+		}
+
+		document.getElementById('size200').onclick=function(){
+			document.getElementById('box').style.height="200px";
+		}
+		document.getElementById('size300').onclick=function(){
+			document.getElementById('box').style.height="300px";
+
+		}
+		document.getElementById('width100').onclick=function(){
+			document.getElementById('box').style.width="100px";
+		}
+		document.getElementById('width200').onclick=function(){
+			document.getElementById('box').style.width="200px";
+		}
+		document.getElementById('width300').onclick=function(){
+			document.getElementById('box').style.width="300px";
+		}
+
+		document.getElementById('lv').onclick=function(){
+			document.getElementById('box').style.background="green";
+		}
+		document.getElementById('yl').onclick=function(){
+			document.getElementById('box').style.background="yellow";
+		}
+		document.getElementById('bl').onclick=function(){
+			document.getElementById('box').style.background="blue";
+		}
+
+		document.getElementById('sure1').onclick=function(){
+			document.getElementById('box').style.background="#fff";
+			document.getElementById('box').style.width="100px";
+			document.getElementById('box').style.height="100px";
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		document.getElementById('sure2').onclick=function(){
+			document.getElementById('shezhi').style.display="none";
+		}
+	</script>
+</body>
+
+
+
+
+</html>
